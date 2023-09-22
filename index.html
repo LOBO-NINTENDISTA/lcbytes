@@ -65,22 +65,6 @@
     padding: 5px;
     flex: 2;
   }
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.button-group {
-    display: flex;
-    gap: 150px; /* Espaçamento entre os botões dentro do grupo */
-}
-
-.button-group button {
-    margin-right: 150px; /* Espaçamento entre os botões */
-}
-Escolha a opção que melhor atende às suas necessidades de design e organização. Ambas as opções ajudarão a separar visualmente os botões e evitar confusões ao apertá-los.
-
 </style>
 </head>
 <body>
@@ -99,14 +83,10 @@ Escolha a opção que melhor atende às suas necessidades de design e organizaç
 
     <!-- Div para agrupar os botões -->
     <div class="button-container">
-    <div class="button-group">
-        <button onclick="processText()">Processar Texto</button>
-    </div>
-    <div class="button-group">
+        <button onclick="confirmProcess()">Processar Texto</button>
         <button onclick="saveText()">Salvar um novo arquivo</button>
         <button onclick="confirmRestart()">REINICIAR PROGRAMA!!!</button>
     </div>
-</div>
 
     <div class="output-container" id="output"></div>
 
@@ -197,6 +177,12 @@ Escolha a opção que melhor atende às suas necessidades de design e organizaç
                 const textArea = document.getElementById('textArea');
                 textArea.value = '';
                 processText(); // Chama a função para atualizar a exibição
+            }
+        }
+		function confirmProcess() {
+            const confirmation = window.confirm('Deseja processar o texto?');
+            if (confirmation) {
+                processText(); // Chama a função de processamento de texto se o usuário confirmar
             }
         }
     </script>
