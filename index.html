@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,6 +65,22 @@
     padding: 5px;
     flex: 2;
   }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-group {
+    display: flex;
+    gap: 150px; /* Espaçamento entre os botões dentro do grupo */
+}
+
+.button-group button {
+    margin-right: 150px; /* Espaçamento entre os botões */
+}
+Escolha a opção que melhor atende às suas necessidades de design e organização. Ambas as opções ajudarão a separar visualmente os botões e evitar confusões ao apertá-los.
+
 </style>
 </head>
 <body>
@@ -84,10 +99,14 @@
 
     <!-- Div para agrupar os botões -->
     <div class="button-container">
+    <div class="button-group">
         <button onclick="processText()">Processar Texto</button>
+    </div>
+    <div class="button-group">
         <button onclick="saveText()">Salvar um novo arquivo</button>
         <button onclick="confirmRestart()">REINICIAR PROGRAMA!!!</button>
     </div>
+</div>
 
     <div class="output-container" id="output"></div>
 
